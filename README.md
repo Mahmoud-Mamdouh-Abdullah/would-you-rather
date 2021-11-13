@@ -23,3 +23,7 @@ This project was bootstrapped with <a href="https://github.com/facebook/create-r
 - React-Redux.
 - React-Router-Dom v6.
 - Bootstrap.
+
+## Deployment
+- The app deployed and hosted by <a href="https://create-react-app.dev/docs/deployment/#github-pages">Github pages</a>.
+- and finally try the app from this link <a href="https://mahmoud-mamdouh-abdullah.github.io/would-you-rather/#/">Would You Rather App Link</a>.
