@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+
+.btn-active {
+  color: #007bff;
+}
+
+.avatar {
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.circle-score {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #dc3545;
+  vertical-align: middle;
+}
+
+.bg-login {
+  background-image: linear-gradient(to right, #dc3545 , #007bff);
+}
