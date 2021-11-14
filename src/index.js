@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import reducers from './reducers';
 import { Provider } from 'react-redux';
@@ -14,9 +14,9 @@ const store = createStore(reducers, middlewares);
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

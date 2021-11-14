@@ -22,8 +22,8 @@ const LeaderBoard = (props) => {
 
             <div className="card-body d-flex flex-column justify-content-center">
                 {scoreSheet.map(item => (
-                    <div className="d-flex flex-row justify-content-center">
-                        <ScoreItem userId={item.id} score={item.score} key={item.id} />
+                    <div key={item.id} className="d-flex flex-row justify-content-center">
+                        <ScoreItem key={item.id} userId={item.id} score={item.score} />
                     </div>
                 ))}
             </div>

@@ -7,7 +7,6 @@ const Home = (props) => {
     const [page, setPage] = useState('unans');
     const { answers } = users[authedUser];
 
-    console.log(users);
     let sortedQuestions = Object.values(questions).sort((a, b) => (
         b.timestamp - a.timestamp
     ));

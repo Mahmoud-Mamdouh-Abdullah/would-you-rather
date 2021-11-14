@@ -8,7 +8,6 @@ function Login(props) {
 
     const { users, dispatch } = props;
     const [userId, setUserId] = useState(null);
-    const [goToHome, setGoToHome] = useState(false);
     const naviagte = useNavigate();
     const handleSelectChange = (e) => {
         setUserId(e.target.value);
@@ -17,12 +16,8 @@ function Login(props) {
     const handleSubmit = () => {
         if (userId !== null) {
             dispatch(setAuthedUserAction(userId));
-            setGoToHome(true);
+            naviagte('/', { replace: true });
         }
-    }
-
-    if(goToHome) {
-        naviagte('/');
     }
 
     return (
