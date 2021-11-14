@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import appIcon from '../images/app-icon.png';
 import { setAuthedUserAction } from '../actions/authedUser';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Login(props) {
 
     const { users, dispatch } = props;
     const [userId, setUserId] = useState(null);
     const naviagte = useNavigate();
+    const location = useLocation();
+
+
     const handleSelectChange = (e) => {
         setUserId(e.target.value);
     }
@@ -16,7 +19,11 @@ function Login(props) {
     const handleSubmit = () => {
         if (userId !== null) {
             dispatch(setAuthedUserAction(userId));
-            naviagte('/', { replace: true });
+            if (location.state !== null) {
+                naviagte(location.state);
+            } else {
+                naviagte('/');
+            }
         }
     }
 
